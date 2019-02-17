@@ -10,7 +10,7 @@ const publication = {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Date',
+      title: 'Publication Date',
       name: 'date',
       type: 'date',
       default: Date.now(),
@@ -51,6 +51,21 @@ const publication = {
         }
       }],
       validation: Rule => Rule.unique().error('Cannot have duplicate images')
+    }
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'date'
+    }
+  },
+  orderings: [
+    {
+      title: 'Publication Date',
+      name: 'date',
+      by: [
+        { field: 'date', direction: 'desc' }
+      ]
     }
   ]
 }
