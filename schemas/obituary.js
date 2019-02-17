@@ -10,6 +10,11 @@ const obituary = {
       validation: Rule => Rule.required()
     },
     {
+      title: 'Expired / Active',
+      name: 'active',
+      type: 'boolean'
+    },
+    {
       title: 'Birth Date',
       name: 'birthDate',
       type: 'date',
@@ -25,7 +30,8 @@ const obituary = {
       default: Date.now(),
       options: {
         dateFormat: 'YYYY-MM-DD'
-      }
+      },
+      validation: Rule => Rule.required()
     },
     {
       title: 'Description',
@@ -42,6 +48,22 @@ const obituary = {
       options: {
         hotspot: true
       }
+    }
+  ],
+  preview: {
+    select: {
+      title: 'name',
+      subtitle: 'deathDate',
+      media: 'image'
+    }
+  },
+  orderings: [
+    {
+      title: 'Death Date',
+      name: 'deathDate',
+      by: [
+        { field: 'deathDate', direction: 'desc' }
+      ]
     }
   ]
 }
