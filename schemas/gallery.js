@@ -64,6 +64,21 @@ const gallery = {
       }],
       validation: Rule => Rule.unique().error('Cannot have duplicate images')
     }
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'date'
+    }
+  },
+  orderings: [
+    {
+      title: 'Date',
+      name: 'date',
+      by: [
+        { field: 'date', direction: 'desc' }
+      ]
+    }
   ]
 }
 
