@@ -3,7 +3,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import {
   contribution,
-  publication
+  publication,
+  gallery,
+  galleryTag
 } from './'
 
 export default createSchema({
@@ -11,6 +13,8 @@ export default createSchema({
   types: [
     ...schemaTypes,
     contribution,
-    publication
+    publication,
+    gallery,
+    galleryTag
   ]
 })
