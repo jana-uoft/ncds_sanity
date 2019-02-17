@@ -45,6 +45,22 @@ const event = {
         hotspot: true
       }
     }
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'startTime',
+      media: 'image'
+    }
+  },
+  orderings: [
+    {
+      title: 'End Time',
+      name: 'endTime',
+      by: [
+        { field: 'endTime', direction: 'desc' }
+      ]
+    }
   ]
 }
 
