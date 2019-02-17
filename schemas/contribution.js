@@ -10,11 +10,6 @@ const contribution = {
       validation: Rule => Rule.required()
     },
     {
-      title: 'Description',
-      name: 'description',
-      type: 'text'
-    },
-    {
       title: 'Date',
       name: 'date',
       type: 'date',
@@ -23,6 +18,14 @@ const contribution = {
         dateFormat: 'YYYY-MM-DD'
       },
       validation: Rule => Rule.required()
+    },
+    {
+      title: 'Description',
+      name: 'description',
+      type: 'array',
+      of: [{
+        type: 'block'
+      }]
     },
     {
       title: 'Images',
