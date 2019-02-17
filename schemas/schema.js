@@ -5,7 +5,8 @@ import {
   contribution,
   publication,
   gallery,
-  galleryTag
+  galleryTag,
+  event
 } from './'
 
 export default createSchema({
@@ -15,6 +16,7 @@ export default createSchema({
     contribution,
     publication,
     gallery,
-    galleryTag
+    galleryTag,
+    event
   ]
 })
