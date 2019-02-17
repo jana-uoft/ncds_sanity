@@ -31,6 +31,9 @@ const contribution = {
       title: 'Images',
       name: 'images',
       type: 'array',
+      options: {
+        layout: 'grid'
+      },
       of: [{
         type: 'image',
         fields: [

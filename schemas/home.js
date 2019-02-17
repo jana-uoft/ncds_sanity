@@ -1,31 +1,14 @@
-const publication = {
-  title: 'Publication',
-  name: 'publication',
+const home = {
+  title: 'Home Images',
+  name: 'home',
   type: 'document',
   fields: [
     {
-      title: 'Title',
-      name: 'title',
+      title: 'Name',
+      name: 'name',
       type: 'string',
+      hidden: true,
       validation: Rule => Rule.required()
-    },
-    {
-      title: 'Date',
-      name: 'date',
-      type: 'date',
-      default: Date.now(),
-      options: {
-        dateFormat: 'YYYY-MM-DD'
-      },
-      validation: Rule => Rule.required()
-    },
-    {
-      title: 'Description',
-      name: 'description',
-      type: 'array',
-      of: [{
-        type: 'block'
-      }]
     },
     {
       title: 'Images',
@@ -50,9 +33,15 @@ const publication = {
           hotspot: true
         }
       }],
-      validation: Rule => Rule.unique().error('Cannot have duplicate images')
+      validation: Rule => Rule.required().unique().custom((images, { document }) => {
+        if (document.name === 'nainativu') {
+          return images && images.length === 8 ? true : 'Must upload exactly 8 images'
+        } else {
+          return images && images.length === 4 ? true : 'Must upload exactly 4 images'
+        }
+      })
     }
   ]
 }
 
-export default publication
+export default home
