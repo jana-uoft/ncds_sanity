@@ -1,6 +1,6 @@
-const contribution = {
-  title: 'Contribution',
-  name: 'contribution',
+const publication = {
+  title: 'Publication',
+  name: 'publication',
   type: 'document',
   fields: [
     {
@@ -49,4 +49,4 @@ const contribution = {
   ]
 }
 
-export default contribution
+export default publication
