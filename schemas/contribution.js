@@ -52,6 +52,21 @@ const contribution = {
       }],
       validation: Rule => Rule.unique().error('Cannot have duplicate images')
     }
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'date'
+    }
+  },
+  orderings: [
+    {
+      title: 'Contribution Date',
+      name: 'date',
+      by: [
+        { field: 'date', direction: 'desc' }
+      ]
+    }
   ]
 }
 
