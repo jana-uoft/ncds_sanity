@@ -1,5 +1,5 @@
 const publication = {
-  title: 'Publication',
+  title: 'Publications',
   name: 'publication',
   type: 'document',
   fields: [

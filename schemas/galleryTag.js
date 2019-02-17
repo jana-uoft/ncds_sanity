@@ -1,5 +1,5 @@
 const GalleryTag = {
-  title: 'GalleryTag',
+  title: 'Gallery Types',
   name: 'galleryTag',
   type: 'document',
   fields: [

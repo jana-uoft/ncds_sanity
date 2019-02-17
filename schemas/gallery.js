@@ -1,5 +1,5 @@
 const gallery = {
-  title: 'Gallery',
+  title: 'Galleries',
   name: 'gallery',
   type: 'document',
   fields: [

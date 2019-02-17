@@ -1,5 +1,5 @@
 const contribution = {
-  title: 'Contribution',
+  title: 'Contributions',
   name: 'contribution',
   type: 'document',
   fields: [

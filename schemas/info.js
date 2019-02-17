@@ -1,5 +1,5 @@
 const info = {
-  title: 'Info',
+  title: 'Information',
   name: 'info',
   type: 'document',
   fields: [

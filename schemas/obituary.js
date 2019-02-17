@@ -1,5 +1,5 @@
 const obituary = {
-  title: 'Obituary',
+  title: 'Obituaries',
   name: 'obituary',
   type: 'document',
   fields: [
