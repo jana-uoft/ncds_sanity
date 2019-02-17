@@ -7,7 +7,8 @@ import {
   gallery,
   galleryTag,
   event,
-  obituary
+  obituary,
+  info
 } from './'
 
 export default createSchema({
@@ -19,6 +20,7 @@ export default createSchema({
     gallery,
     galleryTag,
     event,
-    obituary
+    obituary,
+    info
   ]
 })
